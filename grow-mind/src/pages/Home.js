@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
 import AboutModal from './AboutModal';  // Import the AboutModal component
@@ -29,11 +29,14 @@ const Home = () => {
 
   const handleStartCrossword = () => {
     setStartTime(Date.now());
+    localStorage.setItem('crosswordStartTime', Date.now());
     navigate('/crossword', { state: { startTime: Date.now() } });
   };
 
+  const handleLeaderboardClick = () => {
+    navigate('/leaderboard');
+  };
 
-  
   return (
     <div>
       <h1>Home</h1>
@@ -48,8 +51,13 @@ const Home = () => {
         ))}
         <li>
           <h2>Crossword Puzzle</h2>
-          <button onClick={handleStartCrossword}>Start Crossword</button>
+          <button onClick={handleStartCrossword}>
+            Start Crossword
+          </button>
           <button onClick={handleAboutClick}>About</button>
+        </li>
+        <li>
+          <button onClick={handleLeaderboardClick}>View Leaderboard</button>
         </li>
       </ul>
       <AboutModal isOpen={isAboutOpen} onClose={handleCloseModal} />
