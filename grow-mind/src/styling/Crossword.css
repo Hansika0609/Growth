@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.Page {
+  padding: 2em;
+  background-color: #dcb5ee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Header {
+  margin-bottom: 1em;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+.Content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.CrosswordWrapper {
+  width: 100%; /* Adjust to take full width */
+  display: flex;
+  justify-content: center;
+}
+
+.crossword.correct rect {
+  stroke: rgb(100, 200, 100) !important;
+}
+
+.crossword.correct svg > rect {
+  fill: rgb(100, 200, 100) !important;
+}
+
+.crossword.correct text {
+  fill: rgb(100, 200, 100) !important;
+}
+
+.clue {
+  color: #000; /* Set text color to black */
+  font-size: 1.2em; /* Increase font size */
+  text-align: left; /* Align text to the left */
+}
+
+/* Remove the checkmark before the correct clue */
+.clue.correct::before {
+  display: none;
+}
+
+.clue.correct {
+  text-decoration: line-through;
+  color: rgb(130, 130, 130);
+}
+
+.Score {
+  margin-top: 1em;
+  font-size: 1.5em;
+  color: #333;
+}
+
+@media (max-width: 800px) {
+  .Content {
+    flex-direction: column;
+  }
+
+  .CrosswordWrapper {
+    width: 100%;
+  }
+}
+
+/* src/styling/Crossword.css */
+.Page {
+  position: relative;
+}
+
+.about-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it appears above other elements */
+}
+
+.about-icon:hover {
+  background-color: #0056b3;
+}
+
+/* Other existing styles... */
+

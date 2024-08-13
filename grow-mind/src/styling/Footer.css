@@ -1,0 +1,20 @@
+.footer {
+    background-color: #2e2e2e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+    border-top: 2px solid #ff5733;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer span {
+    color: #ff5733;
+  }
+  
