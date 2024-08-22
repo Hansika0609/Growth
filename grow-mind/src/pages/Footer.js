@@ -4,7 +4,7 @@ import '../App.css';
 const Footer = () => {
     return (
       <footer className="footer">
-        <p>Crafted by Hansika & Shubham</p>
+        <p>Crafted by Hansika</p>
       </footer>
     );
   };

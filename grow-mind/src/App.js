@@ -6,6 +6,9 @@ import Game from './pages/Game';
 import LeaderBoard from './pages/LeaderBoard';
 import Footer from './pages/Footer';
 import Crossword from './pages/Crossword';
+import AdminLogin from './pages/AdminLogin';
+import AdminSettings from './pages/AdminSettings';
+import AdminHome from './pages/AdminHome';
 import './App.css';
 
 function App() {
@@ -17,6 +20,9 @@ function App() {
         <Route path="/game/:id" element={<Game />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="/crossword" element={<Crossword />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/home" element={<AdminHome />} />
+        <Route path="/admin/settings" element={<AdminSettings />} />
         <Route path="*" element={<p>404: Page not found</p>} />
       </Routes>
       <Footer />
