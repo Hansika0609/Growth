@@ -1,6 +1,7 @@
 // src/components/Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styling/Login.css'; // Import the CSS file
 
 const validEmails = [
   'hansikar@amdocs.com',
@@ -23,19 +24,22 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => {
-          setEmail(e.target.value);
-          setIsValidUser(true); // Reset validation message on email change
-        }}
-      />
-      <button onClick={handleLogin}>Login</button>
-      {!isValidUser && <p style={{ color: 'red' }}>You are not a valid user.</p>}
+    <div className="login-container">
+      <div className="login-box">
+        <h1 className="login-title">Login</h1>
+        <input
+          type="email"
+          className="login-input"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            setIsValidUser(true); // Reset validation message on email change
+          }}
+        />
+        <button className="login-button" onClick={handleLogin}>Login</button>
+        {!isValidUser && <p className="error-message">You are not a valid user.</p>}
+      </div>
     </div>
   );
 };

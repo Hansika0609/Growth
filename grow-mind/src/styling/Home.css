@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+     /* Apply gaming font globally */
+    background-color: #f4f4f9;
+    color: #1a110f; /* Use the same color as in the title for consistency */
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent background */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #1a110f;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.game-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.game-name {
+    font-size: 20px;
+    color: #444;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 20px;
+}
+.game-button {
+    padding: 12px 25px; /* Slightly larger padding for a more prominent button */
+    border-radius: 8px; /* More rounded corners */
+    background: linear-gradient(135deg, #0066cc, #0099ff); /* Gradient background */
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.game-button:hover {
+    background: linear-gradient(135deg, #004080, #0066cc); /* Darker gradient on hover */
+    transform: translateY(-3px); /* Slightly raise the button on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.leaderboard-button {
+    padding: 14px 35px; /* Larger padding for a more prominent button */
+    border-radius: 8px;
+    background: linear-gradient(135deg, #28a745, #5cd65c); /* Gradient background */
+    color: #fff;
+    font-size: 20px; /* Slightly larger font for emphasis */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.leaderboard-button:hover {
+    background: linear-gradient(135deg, #218838, #41b441); /* Darker gradient on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
